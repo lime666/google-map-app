@@ -1,4 +1,10 @@
-<nav class="nav flex-column">
-  <p>Admins</p>
-  <%= render 'admin/users/user' %>
+<nav class="nav navbar-brand flex-column text-center">
+  <h2>Admins</h2>
+    <ul class="nav flex-column text-center text-md-end">
+      <% User.all.each do |user| %>
+        <li class="nav-link">
+          <%= link_to user.name, admin_user_path(user) %>
+        </li>
+      <% end %>
+    </ul>
 </nav>
