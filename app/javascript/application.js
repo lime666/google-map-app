@@ -4,6 +4,7 @@ import "./controllers"
 import * as bootstrap from "bootstrap"
 import "./jquery"
 import "jquery-ujs"
+import "./maps.js"
 
 document.addEventListener("turbo:load", () => {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
