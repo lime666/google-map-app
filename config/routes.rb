@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  resources :locations
+  resources :users
+
   namespace :admin do
     resources :users
+
   end
 
   get 'admin', to: 'admin/users#index'
