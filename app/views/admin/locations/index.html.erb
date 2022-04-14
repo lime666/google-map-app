@@ -1,14 +1,30 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Locations</h1>
-
 <div id="locations">
-  <% @locations.each do |location| %>
-    <%= render location %>
-    <p>
-      <%= link_to "Show this location", admin_location_path(location) %>
-    </p>
-  <% end %>
+  <div class="container">
+    <h1>Locations</h1>
+    <table class="table table-striped table-bordered table-sm">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Latitude</th>
+          <th scope="col">Longitude</th>
+          <th scope="col">Watch location</th>
+        </tr>
+      </thead>
+      <% @locations.each do |location| %>
+        <tbody>
+          <tr>
+            <th scope="row"><%= @locations.ids.index{|x| x == location.id} + 1 %></th>
+            <td><%= location.latitude %></td>
+            <td><%= location.longitude %></td>
+            <td>
+              <%= link_to 'Show location', admin_location_path(location), class: "btn btn-dark" %>
+            </td>
+          </tr>
+        </tbody>
+      <% end %>
+    </table>
+    <%= link_to "Create new location", new_admin_location_path, class: "btn btn-dark" %>
+  </div>
 </div>
-
-<%= link_to "New location", new_admin_location_path %>

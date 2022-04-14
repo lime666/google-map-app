@@ -13,20 +13,25 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control", id: "InputName", placeholder: "Enter your name, please" %>
   </div>
+  <br>
 
   <div>
     <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control", id: "InputEmail", placeholder: "Enter your email" %>
   </div>
+  <br>
 
   <div>
     <%= form.label :password, style: "display: block" %>
-    <%= form.text_field :password_digest %>
+    <%= form.text_field :password_digest, class: "form-control", id: "InputPassword", placeholder: "Final step" %>
   </div>
+  <br>
 
   <div>
-    <%= form.submit %>
+    <button type="submit" class="btn btn-dark">
+      Submit
+    </button>
   </div>
 <% end %>

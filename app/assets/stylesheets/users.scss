@@ -1,5 +1,0 @@
-tr::before {
-  counter-reset: section;
-  counter-increment: section -1;
-  content: "Number " counter(section) ": "
-  }
