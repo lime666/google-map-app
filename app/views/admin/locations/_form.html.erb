@@ -13,15 +13,15 @@
 
   <div>
     <%= form.label :latitude, style: "display: block" %>
-    <%= form.text_field :latitude %>
+    <%= form.text_field :latitude, class: "form-control", id: "input-latitude", placeholder: "Enter latitude" %>
   </div>
 
   <div>
     <%= form.label :longitude, style: "display: block" %>
-    <%= form.text_field :longitude %>
+    <%= form.text_field :longitude, class: "form-control", id: "input-longitude", placeholder: "Enter longitude" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit 'Submit', class: 'btn btn-dark' %>
   </div>
 <% end %>
