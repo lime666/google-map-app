@@ -1,4 +1,4 @@
-<p style="color: green"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <div id="users">
   <div class="container">
@@ -11,10 +11,10 @@
           <th scope="col">Watch profile</th>
         </tr>
       </thead>
-      <% @users.each do |user| %>
+      <% @users.each.with_index(1) do |user, index| %>
         <tbody>
           <tr>
-            <th scope="row"><%= @users.ids.index{|x| x == user.id} + 1 %></th>
+            <th scope="row"><%= index %></th>
             <td><%= user.name %></td>
             <td>
               <%= link_to 'Show user', admin_user_path(user), class: "btn btn-dark" %>

@@ -1,4 +1,4 @@
-<p style="color: green"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <div id="locations">
   <div class="container">
@@ -12,10 +12,10 @@
           <th scope="col">Watch location</th>
         </tr>
       </thead>
-      <% @locations.each do |location| %>
+      <% @locations.each.with_index(1) do |location, index| %>
         <tbody>
           <tr>
-            <th scope="row"><%= @locations.ids.index{|x| x == location.id} + 1 %></th>
+            <th scope="row"><%= index %></th>
             <td><%= location.latitude %></td>
             <td><%= location.longitude %></td>
             <td>
