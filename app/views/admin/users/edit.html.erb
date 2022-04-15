@@ -2,8 +2,6 @@
 
 <%= form_for [:admin, @user] do |form| %>
 
-  <%#= render "form", user: @user %>
-
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name, class: "form-control", id: "input-name", placeholder: "Enter your name, please" %>

@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sigh_in_path
-  	admin_root_path
+    admin_root_path
   end
 end
