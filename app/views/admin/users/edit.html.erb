@@ -1,6 +1,24 @@
 <h1>Editing user</h1>
 
-<%= render "form", user: @user %>
+<%= form_for [:admin, @user] do |form| %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class: "form-control", id: "input-name", placeholder: "Enter your name, please" %>
+  </div>
+  <br>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email, class: "form-control", id: "input-email", placeholder: "Enter your email" %>
+  </div>
+  <br>
+
+    <div>
+    <%= form.submit 'Submit', class: 'btn btn-dark' %>
+  </div>
+
+<% end %>
 
 <br>
 

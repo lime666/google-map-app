@@ -48,6 +48,9 @@ gem "bootsnap", require: false
 # Geocoder
 gem 'geocoder'
 
+# Users authorization&registration
+gem 'devise'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

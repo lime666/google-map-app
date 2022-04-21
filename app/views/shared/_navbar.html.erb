@@ -16,6 +16,21 @@
             <%= link_to 'Dashboard', admin_root_path, class: 'nav-link'%>
           </li>
         </ul>
+          <form class="d-flex">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <% if !admin_user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to 'Sign in', admin_user_session_path, class: 'nav-link', method: :post %>
+              </li>
+              <% end %>
+              <% if current_admin_user %>
+                <li class="nav-item">
+                  <%= link_to 'Log out', destroy_admin_user_session_path, class: 'nav-link', method: :delete %>
+                </li>
+              <% end %>
+            </ul>
+          </form>
+        </ul>
       </div>
   </div>
 </nav>
