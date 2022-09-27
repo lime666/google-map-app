@@ -49,6 +49,7 @@ gem "bootsnap", require: false
 gem 'geocoder'
 
 gem 'factory_bot_rails'
+gem 'capybara'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

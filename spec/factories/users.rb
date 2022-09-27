@@ -10,4 +10,10 @@ FactoryBot.define do
 		email { "mail@mail.mail" }
 		password_digest { "123123" }
 	end
+
+	factory :another_user do
+		name { "Natasha2" }
+		email { "qwemail@mail.mail" }
+		password_digest { "123456789" }
+	end
 end
